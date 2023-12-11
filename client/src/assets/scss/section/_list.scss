@@ -1,0 +1,104 @@
+.list__wrap {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+
+
+
+    @media (max-width:1000px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width:800px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width:500px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    >div {
+        border: 1px solid rgb(225, 231, 245);
+        padding: 24px 20px;
+        border-radius: 10px;
+
+        .cate {
+            padding: 3px 8px;
+            background: rgb(236, 253, 242);
+            color: rgb(52, 194, 106);
+            font-size: 14px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        &:nth-child(2) {
+            .cate {
+                background-color: rgb(225, 237, 248);
+                color: rgb(211, 64, 153);
+            }
+        }
+
+        &:nth-child(3) {
+            .cate {
+                background-color: rgb(255, 239, 237);
+                color: rgb(211, 80, 65);
+            }
+        }
+
+        .title {
+            font-size: 17px;
+            line-height: 1.6;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        .desc {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .auth {
+            font-size: 14px;
+            color: rgb(143, 149, 171);
+            position: relative;
+            padding-left: 30px;
+
+            &::before {
+                content: '';
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                background-color: rgb(100, 70, 255);
+                left: 0;
+                top: 0;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+.login__header {
+    width: 100%;
+    padding: 100px 0;
+    background-color: #000;
+    text-align: center;
+    margin-bottom: 30px;
+
+    h3 {
+        color: #fff;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        font-size: 72px;
+    }
+
+    p {
+        font-size: 0.8rem;
+        color: #fff;
+        text-align: center;
+    }
+}
